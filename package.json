@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "npx @cloudflare/next-on-pages && cat files/wasmthing >> .vercel/output/functions/api/hello.func.js",
+    "pages:build": "npx @cloudflare/next-on-pages && cp files/wasmthing .vercel/output/static/_worker.js/__next-on-pages-dist__/functions/_not-found.func.js",
     "preview": "npm run pages:build && wrangler pages dev .vercel/output/static",
     "deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static"
   },
